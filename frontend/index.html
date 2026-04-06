@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hashel Ghor - Authentic Bengali Cuisine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container">
+      <img src="assets/logo.png" alt="Heshel Ghor Logo" class="site-logo">
+      <div class="logo-text">Heshel <span class="highlight">Ghor</span></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="fade-up">The Essence of <br> <span class="highlight">Bengali Cuisine</span></h1>
+      <p class="fade-up delay-1">Discover the vibrant spices, authentic recipes, and culinary heritage straight from the kitchens of Bengal.</p>
+      <a href="#menu" class="btn primary-btn fade-up delay-2">Explore Menu</a>
+    </div>
+    <div class="hero-image fade-up delay-2">
+      <div class="thali-container">
+        <img src="assets/bengali_thali.png" alt="Grand Bengali Thali" class="floating-thali">
+        <div class="glow-effect"></div>
+        <div class="particles"></div>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <div class="section-header">
+      <h2>Signature Dishes</h2>
+      <p>Click on any dish to view ingredients and cooking tips</p>
+    </div>
+    <div class="grid-container" id="menu-grid">
+      <!-- Generated via JS -->
+      <div class="loading-state">Loading deliciousness...</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Hashel Ghor. Built with love for Bengali cuisine.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <button class="close-btn" id="close-modal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-image" id="modal-img"></div>
+        <div class="modal-text">
+          <h2 id="modal-title">Dish Title</h2>
+          <h4 id="modal-subtitle">Subtitle</h4>
+          <p id="modal-desc" class="modal-desc">Description</p>
+          
+          <div class="modal-details">
+            <div class="detail-group">
+              <h3>Ingredients</h3>
+              <ul id="modal-ingredients"></ul>
+            </div>
+            <div class="detail-group">
+              <h3>Cooking Tips</h3>
+              <ul id="modal-tips"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

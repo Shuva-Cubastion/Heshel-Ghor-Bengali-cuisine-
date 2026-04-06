@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story - Heshel Ghor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-container" onclick="location.href='index.html'">
+      <img src="assets/logo.png" alt="Heshel Ghor Logo" class="site-logo">
+      <div class="logo-text">Heshel <span class="highlight">Ghor</span></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html" class="active">Our Story</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Story Hero (Narrative Focused) -->
+  <section class="story-hero minimal">
+    <div class="hero-content">
+      <p class="fade-up"><strong>A Journey Through the Soul of Bengal</strong></p>
+    </div>
+  </section>
+
+  <!-- Narrative Content -->
+  <main class="story-container">
+
+    <section class="story-section">
+      <h2 class="story-heading">The Heart of Bengali Cooking</h2>
+      <div class="story-text">
+        <p>Bengali cuisine is more than just food — it is emotion, nostalgia, and the warmth of a home kitchen. Every
+          dish carries the memory of generations, from the slow-cooked curries of ancestral villages to the vibrant
+          streets of the city.</p>
+
+        <div class="story-image small">
+          <img src="assets/traditional_kitchen.png" alt="Traditional Bengali Kitchen Art">
+        </div>
+
+        <p>Spices are not just ingredients here; they are storytellers. The crackle of mustard oil, the rhythmic
+          <em>shil-nora</em> (grinding stone) at dawn, and the aroma of <em>panch phoron</em> define a culture that
+          celebrates the seasons on a plate.</p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2 class="story-heading">The Art of Traditional Cooking</h2>
+      <div class="story-text">
+        <p>Before modern kitchens, the "Heshel" was a sacred space of clay ovens and hand-ground spices. The artistry
+          lay in the patience of the cook — slow-roasting masalas until they deepened into a dark, rich brown, and using
+          fish fresh from the village ponds.</p>
+
+        <div class="story-image small">
+          <img src="assets/old_kolkata.png" alt="Historical Kolkata Streets">
+        </div>
+
+        <p>We preserve this craftsmanship, using techniques passed down through grandmother's secrets to bring the true
+          soul of Bengal to your table.</p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2 class="story-heading">A Legacy of Regal Influence</h2>
+      <div class="story-text">
+        <p>The Bengali plate is a tapestry woven from many threads. From the sophisticated Mughal and Nawabi feasts that
+          introduced rich gravies and biriyanis, to the European influences that shaped our baking and street food, each
+          era left an indelible mark.</p>
+
+        <div class="story-image small">
+          <img src="assets/mughal_heritage.png" alt="Mughal Influenced Kitchen">
+        </div>
+
+        <p>“Heshel Ghor” brings this diversity together, offering a balanced menu that reflects the true, multi-layered
+          culinary heritage of the region.</p>
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2 class="story-heading">A Culinary Evolution</h2>
+      <div class="story-text">
+        <p>From the ancient clay pots of the pre-13th century to the modern, time-saving kitchens of today, the essence
+          of Bengali cooking has remained constant: balanced, soulful, and full of character.</p>
+
+        <div class="story-image small">
+          <img src="assets/history_evolution.png" alt="Evolution of Bengali Cuisine Timeline">
+        </div>
+
+        <p>“Heshel Ghor” is our tribute to this evolution — a bridge between the nostalgia of the past and the
+          convenience of the present.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer style="text-align: center; padding: 4rem 0; border-top: 1px solid var(--border-color);">
+    <p>&copy; 2026 Heshel Ghor. Built with love for Bengal.</p>
+  </footer>
+
+  <script>
+    // Intersection Observer for Reveal-on-Scroll animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.story-section').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+
+</html>
