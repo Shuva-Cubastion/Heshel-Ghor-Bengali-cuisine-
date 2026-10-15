@@ -22,7 +22,7 @@ pipeline {
                     test -f Dockerfile
                     test -f backend/server.js
                     test -d frontend
-                    node --check backend/server.js
+                    docker run --rm -v "$PWD:/app" -w /app node:22-alpine node --check backend/server.js
                 '''
             }
         }
