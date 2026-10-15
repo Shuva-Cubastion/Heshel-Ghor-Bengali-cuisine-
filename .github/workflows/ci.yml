@@ -1,0 +1,25 @@
+
+name: First GitHub Actions CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  hello:
+    name: Check the project
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Show repository files
+        run: ls -la
+
+      - name: Print success message
+        run: echo "GitHub Actions CI is working!"
